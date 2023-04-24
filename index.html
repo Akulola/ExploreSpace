@@ -1,0 +1,75 @@
+<<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>EXPLORE SPACE</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav class="navbar">
+        <div id="logo">
+          <img src="Assets/logo1.jpg" alt="IMG logo">
+          <h1>EXPLORE SPACE</h1>
+        </div>
+        <div class="navbar-links">
+          <li id="pic-of-the-day">
+            <a href="#potd">Pic of the Day</a>
+          </li>
+          <div id="search">
+            <form>
+              <input type="text" placeholder="Search">
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      
+    <main>
+      <section id="carousel">
+        <div id="carousel-images">
+          <img src="image1.jpg" alt="Image 1">
+          <img src="image2.jpg" alt="Image 2">
+          <img src="image3.jpg" alt="Image 3">
+        </div>
+        <div id="carousel-info">
+          <div class="image-info">
+            <h2>Image 1</h2>
+            <p>Description of image 1</p>
+          </div>
+          <div class="image-info">
+            <h2>Image 2</h2>
+            <p>Description of image 2</p>
+          </div>
+          <div class="image-info">
+            <h2>Image 3</h2>
+            <p>Description of image 3</p>
+          </div>
+        </div>
+      </section>
+      <section id="potd">
+        <img src="potd.jpg" alt="Picture of the Day">
+        <div class="info">
+          <h2>PHOTO OF THE DAY</h2>
+          <p>Description of the picture of the day</p>
+        </div>
+      </section>
+      <section id="search-results">
+        <div id="random-image">
+          <img src="random.jpg" alt="Random Image">
+          <div class="info">
+            <h2>Random Title</h2>
+            <p>Description of the random image</p>
+          </div>
+        </div>
+        <div id="search-image">
+          <img src="search.jpg" alt="Search Result Image">
+          <div class="info">
+            <h2>Search Result Title</h2>
+            <p>Description of the search result image</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
