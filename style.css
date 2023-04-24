@@ -1,71 +1,111 @@
-/* Global styles */
+@import url('https://fonts.googleapis.com/css2?family=Luxie:wght@300;400;500;600;700&display=swap');
+
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-  }
-  
-  a {
-    display: inline-block;
-    padding: 10px 15px;
-    text-decoration: none;
-    color: #0d0c0c;
-  }
-  
-  /* Navigation bar */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #4b15a1;
-    height: 80px;
-    padding: 0 50px;
-  }
-  
-  #logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  #logo img {
-    height: 50px;
-  }
-  
-  #logo h1 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-left: 20px;
-  }
-  
-  .navbar-links {
-    display: flex;
-    align-items: center;
-  }
-  
-  #pic-of-the-day {
-    margin-right: 20px;
-  }
-  
-  #search {
-    display: flex;
-    align-items: center;
-  }
-  
-  #search input[type="text"] {
-    border: none;
-    padding: 8px;
-    font-size: 16px;
-  }
-  
-  #search button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 8px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  #search button:hover {
-    background-color: #0e0f0e;
-  }
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  background-image: url(https://img.freepik.com/free-photo/astronaut-mars-collage_23-2149395734.jpg?w=1380&t=st=1682351893~exp=1682352493~hmac=032cecdde2a352015c82395a2145fbaaa28203b5cb9ae856a2d92c681b57ea1f);
+  background-size: cover;
+}
+
+a {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #f6eeee;
+}
+
+/* Navigation bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 50px;
+}
+
+#logo {
+  display: flex;
+  align-items:center;
+}
+#logo h1 {
+  color: #ffffff;
+  font-size: 35px;
+  font-weight: bold;
+  margin-left: 20px;
+  font-family: 'Luxie', sans-serif;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+#pic-of-the-day {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+#search {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+#search input[type="text"] {
+  border: none;
+  padding: 8px;
+  font-size: 16px;
+}
+
+#search button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#search button:hover {
+  background-color: #0e0f0e;
+}
+#intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  flex-wrap: wrap-reverse;
+}
+
+.image-container {
+  flex: 1;
+  max-width: 50%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.text-container {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.text-container p {
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+header {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #fff;
+}
