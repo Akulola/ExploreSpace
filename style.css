@@ -152,23 +152,47 @@ a {
   top: 45%;
   right: 2%;
 }
+
 #potd {
-  text-align: center;
-  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  padding: 20px;
+  flex-wrap:wrap;
 }
 
-#potd h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
+#potd-image {
+  flex: 1;
+  max-width: 50%;
+  height: 250px;
+  overflow: hidden;
 }
 
-#potd img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 20px;
+#potd-image img {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
 }
 
-#potd-description {
-  font-size: 20px;
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 50%;
+  margin-left: 20px;
+}
+
+.info h2 {
+ font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.info p {
+  font-size: 18px;
   line-height: 1.5;
+  margin: 0;
+  color: white
 }
