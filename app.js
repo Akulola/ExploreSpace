@@ -6,8 +6,6 @@
 
 //PHOTO OF THE DAY.
 // Fetch the photo of the day from NASA APOD API
-// Fetch the photo of the day from NASA APOD API
-// Fetch the photo of the day from NASA APOD API
 fetch('https://api.nasa.gov/planetary/apod?api_key=1DF4WOFyAGA5G2hUd87vzhuyoEv9dGq7GiHBWKmW')
   .then(response => response.json())
   .then(data => {
