@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Luxie:wght@300;400;500;600;700&display=swap');
-
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
   font-size: 16px;
-  background-image: url(https://img.freepik.com/free-photo/astronaut-mars-collage_23-2149395734.jpg?w=1380&t=st=1682351893~exp=1682352493~hmac=032cecdde2a352015c82395a2145fbaaa28203b5cb9ae856a2d92c681b57ea1f);
+  background-image: url(Assets/background.jpg);
   background-size: cover;
 }
 
@@ -28,12 +26,13 @@ a {
   display: flex;
   align-items:center;
 }
+
 #logo h1 {
   color: #ffffff;
   font-size: 35px;
   font-weight: bold;
-  margin-left: 20px;
-  font-family: 'Luxie', sans-serif;
+  margin-left: 30px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .navbar-links {
@@ -81,8 +80,8 @@ a {
 
 .image-container {
   flex: 1;
-  max-width: 50%;
-  height: 300px;
+  max-width: 100%;
+  height: 800px;
   overflow: hidden;
 }
 
@@ -103,9 +102,53 @@ a {
   font-size: 18px;
   line-height: 1.5;
 }
+#carousel {
+  display: flex;
+  align-items:center;
+  justify-content:flex-start;
+  flex-direction: column;
+  max-width: 800px;
+  height: 350px;
+  overflow: hidden;
+}
 
-header {
-  margin-top: 20px;
-  font-size: 12px;
-  color: #fff;
+.slide {
+  width: 100%;
+  max-width: 800px;
+  height: 350px;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  z-index: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  font-size: 18px;
+}
+
+.btn:active {
+  transform: scale(1.1);
+}
+
+.btn-prev {
+  top: 45%;
+  left: 2%;
+}
+
+.btn-next {
+  top: 45%;
+  right: 2%;
 }
