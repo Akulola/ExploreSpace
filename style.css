@@ -113,19 +113,27 @@ a {
 
 #carousel {
   display: flex;
-  align-items:center;
-  justify-content:flex-start;
-  flex-direction: column;
-  max-width: 800px;
-  height: 350px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
 }
 
-.slide {
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
   width: 100%;
-  max-width: 800px;
-  height: 350px;
+  height: 100%;
+}
+
+.slide {
+  flex: 1;
   position: absolute;
+  width: 100%;
+  height: 100%;
   transition: all 0.5s;
 }
 
@@ -135,14 +143,24 @@ a {
   object-fit: cover;
 }
 
-.btn {
+.controls {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 40px;
   height: 40px;
   padding: 10px;
   border: none;
   border-radius: 50%;
-  z-index: 10px;
   cursor: pointer;
   background-color: #fff;
   font-size: 18px;
@@ -153,14 +171,13 @@ a {
 }
 
 .btn-prev {
-  top: 45%;
-  left: 2%;
+  margin-right: auto;
 }
 
 .btn-next {
-  top: 45%;
-  right: 2%;
+  margin-left: auto;
 }
+
 #potd {
   display: flex;
   align-items: center;
@@ -173,7 +190,6 @@ a {
   align-items: flex-start;
   height: 600px;
   overflow: hidden;
-  align-items: flex-start;
 }
 
 .potd-container img {
@@ -185,7 +201,7 @@ a {
 .info {
   display: flex;
   flex-direction: column;
-  height: 400px;
+  height: 300px;
   margin-left: 20px;
   align-items: flex-start;
   justify-content:flex-start;
@@ -220,10 +236,11 @@ a {
 }
 
 .searched-image {
-  flex: 1;
-  max-width: 25%;
-  height: 50px;
+  display: flex;
+  align-items: flex-start;
+  height: 600px;
   overflow: hidden;
+
 }
 
 .searched-image img {
