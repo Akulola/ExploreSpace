@@ -1,5 +1,15 @@
 //THE PICK OF THE DAY FROM NAV BAR
+// Get the pic-of-the-day link element from the navbar
+const potdLink = document.querySelector('#pic-of-the-day a');
 
+// Get the potd section element
+const potdSection = document.querySelector('#potd');
+
+// Add a click event listener to the pic-of-the-day link
+potdLink.addEventListener('click', () => {
+  // Scroll to the potd section
+  potdSection.scrollIntoView({ behavior: 'smooth' });
+});
 //ACTIONS FROM THE SUBMIT BUTTON ON NAV BAR.
 
 //CAROUSEL 
