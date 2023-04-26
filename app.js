@@ -13,6 +13,55 @@ potdLink.addEventListener('click', () => {
 //ACTIONS FROM THE SUBMIT BUTTON ON NAV BAR.
 
 //CAROUSEL 
+// Get references to DOM elements
+const carousel = document.querySelector('#carousel');
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.querySelector('.btn-prev');
+const nextBtn = document.querySelector('.btn-next');
+
+// Set up index counter for tracking current slide
+let currentIndex = 0;
+
+// Set up function to move to next slide
+function moveToNextSlide() {
+  // Move current slide offscreen to the left
+  slides[currentIndex].style.transform = 'translateX(-100%)';
+
+  // Increment index counter
+  currentIndex++;
+
+  // If we've reached the end of the slides, wrap back around to the beginning
+  if (currentIndex >= slides.length) {
+    currentIndex = 0;
+  }
+
+  // Move next slide onto the screen from the right
+  slides[currentIndex].style.transform = 'translateX(0)';
+}
+
+// Set up function to move to previous slide
+function moveToPrevSlide() {
+  // Move current slide offscreen to the right
+  slides[currentIndex].style.transform = 'translateX(100%)';
+
+  // Decrement index counter
+  currentIndex--;
+
+  // If we've reached the beginning of the slides, wrap back around to the end
+  if (currentIndex < 0) {
+    currentIndex = slides.length - 1;
+  }
+
+  // Move previous slide onto the screen from the left
+  slides[currentIndex].style.transform = 'translateX(0)';
+}
+
+// Add event listeners to buttons
+nextBtn.addEventListener('click', moveToNextSlide);
+prevBtn.addEventListener('click', moveToPrevSlide);
+
+// Move initial slide onto the screen
+slides[currentIndex].style.transform = 'translateX(0)';
 
 //PHOTO OF THE DAY.
 // Fetch the photo of the day from NASA APOD API
