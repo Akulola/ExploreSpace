@@ -12,7 +12,22 @@ potdLink.addEventListener('click', () => {
 });
 //ACTIONS FROM THE SUBMIT BUTTON ON NAV BAR.
 
-
+//PHOTO OF THE DAY.
+// Fetch the photo of the day from NASA APOD API
+fetch('https://api.nasa.gov/planetary/apod?api_key=1DF4WOFyAGA5G2hUd87vzhuyoEv9dGq7GiHBWKmW')
+  .then(response => response.json())
+  .then(data => {
+    // Update the HTML with the photo of the day and its description
+    const potdImage = document.getElementById('potd-image');
+    const potdTitle = document.getElementById('potd-title');
+    const potdDescription = document.getElementById('potd-description');
+    potdImage.src = data.url;
+    potdTitle.textContent = data.title;
+    potdDescription.textContent = data.explanation;
+  })
+  .catch(error => {
+    console.error(error);
+  });
 //CAROUSEL 
 // Get references to DOM elements
 const carousel = document.querySelector('#carousel');
@@ -65,34 +80,19 @@ prevBtn.addEventListener('click', moveToPrevSlide);
 slides[currentIndex].style.transform = 'translateX(0)';
 
 
-//SEARCH RESULTS.
-const carouselImages = document.querySelectorAll(".carousel-item img");
+//CAROUSEL IMAGE DETAILS.
+const carouselImages = document.querySelectorAll(".slide img");
 const resultTitle = document.querySelector("#result-title");
 const resultDescription = document.querySelector("#result-description");
 
 carouselImages.forEach((img) => {
   img.addEventListener("click", async () => {
-    const imageId = img.dataset.id;
-    const response = await fetch(`https://my-json-server.typicode.com/Akulola/ExploreSpace/images/${imageId}`);
-    const data = await response.json();
+    const imageAlt = img.alt;
+    const response = await fetch(`https://my-json-server.typicode.com/Akulola/ExploreSpace/images?alt=${imageAlt}`);
+    const [data] = await response.json();
     resultTitle.textContent = data.title;
     resultDescription.textContent = data.description;
   });
 });
 
-//PHOTO OF THE DAY.
-// Fetch the photo of the day from NASA APOD API
-fetch('https://api.nasa.gov/planetary/apod?api_key=1DF4WOFyAGA5G2hUd87vzhuyoEv9dGq7GiHBWKmW')
-  .then(response => response.json())
-  .then(data => {
-    // Update the HTML with the photo of the day and its description
-    const potdImage = document.getElementById('potd-image');
-    const potdTitle = document.getElementById('potd-title');
-    const potdDescription = document.getElementById('potd-description');
-    potdImage.src = data.url;
-    potdTitle.textContent = data.title;
-    potdDescription.textContent = data.explanation;
-  })
-  .catch(error => {
-    console.error(error);
-  });
+
