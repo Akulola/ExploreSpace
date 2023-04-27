@@ -10,8 +10,6 @@ potdLink.addEventListener('click', () => {
   // Scroll to the potd section
   potdSection.scrollIntoView({ behavior: 'smooth' });
 });
-//ACTIONS FROM THE SUBMIT BUTTON ON NAV BAR.
-
 //PHOTO OF THE DAY.
 // Fetch the photo of the day from NASA APOD API
 fetch('https://api.nasa.gov/planetary/apod?api_key=1DF4WOFyAGA5G2hUd87vzhuyoEv9dGq7GiHBWKmW')
