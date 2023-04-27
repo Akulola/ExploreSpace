@@ -92,5 +92,3 @@ carouselImages.forEach((img) => {
     resultDescription.textContent = data.description;
   });
 });
-
-
