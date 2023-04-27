@@ -88,8 +88,8 @@ const resultDescription = document.querySelector("#result-description");
 carouselImages.forEach((img) => {
   img.addEventListener("click", async () => {
     const imageAlt = img.alt;
-    const response = await fetch(`https://my-json-server.typicode.com/Akulola/ExploreSpace/images?alt=${imageAlt}`);
-    const [data] = await response.json();
+    const response = await fetch(`https://my-json-server.typicode.com/Akulola/ExploreSpace/images/${imageAlt}`);
+    const data = await response.json();
     resultTitle.textContent = data.title;
     resultDescription.textContent = data.description;
   });
